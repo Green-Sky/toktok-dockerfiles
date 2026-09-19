@@ -81,8 +81,8 @@ RUN tar zxf <(curl -L https://github.com/webmproject/libvpx/archive/refs/tags/v1
  && make install \
  && rm -rf /opt/buildhome/build
 
-RUN mkdir c-toxcore-v0.2.23-rc.2 \
- && tar zxf <(curl -L https://github.com/TokTok/c-toxcore/releases/download/v0.2.23-rc.2/c-toxcore-v0.2.23-rc.2.tar.gz) -C c-toxcore-v0.2.23-rc.2 \
+RUN mkdir c-toxcore-v0.2.23 \
+ && tar zxf <(curl -L https://github.com/TokTok/c-toxcore/releases/download/v0.2.23/c-toxcore-v0.2.23.tar.gz) -C c-toxcore-v0.2.23 \
  && cd c-toxcore-* \
  && cmake \
   -DCMAKE_TOOLCHAIN_FILE="$SYSROOT/static-toolchain.cmake" \
